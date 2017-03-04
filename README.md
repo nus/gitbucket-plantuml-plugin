@@ -1,6 +1,8 @@
 gitbucket-plantuml-plugin
 ========
-A GitBucket plugin renders PlantUML sources.
+A GitBucket plugin renders [PlantUML](http://plantuml.com/) sources.
+
+![screenshot01.png](screenshots/screenshot01.png "screenshot01.png")
 
 Building
 ----
