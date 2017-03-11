@@ -1,4 +1,5 @@
 import com.yotaichino.gitbucket.plugins.plantuml.PlantUMLRenderer
+import com.yotaichino.gitbucket.plugins.plantuml.PlantUMLController
 import javax.servlet.ServletContext
 import gitbucket.core.plugin.PluginRegistry
 import gitbucket.core.service.SystemSettingsService.SystemSettings
@@ -16,5 +17,7 @@ class Plugin extends gitbucket.core.plugin.Plugin {
     registry.addRenderer("plantuml", renderer)
     registry.addRenderer("puml", renderer)
     registry.addRenderer("pu", renderer)
+
+    registry.addController(new PlantUMLController(), "/*")
   }
 }
