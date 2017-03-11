@@ -12,7 +12,7 @@ Run the below command. Note that use `sbt.bat` when running on Windows.
 ./sbt.sh assembly
 ```
 
-You can get the plugin at `target/scala-2.11/gitbucket-plantuml-plugin-assembly-1.0.0.jar` and copy the jar file to `~/.gitbucket/plugins` directory.
+You can get the plugin at `target/scala-2.12/gitbucket-plantuml-plugin-assembly-1.0.0.jar` and copy the jar file to `~/.gitbucket/plugins` directory.
 
 License
 ----
