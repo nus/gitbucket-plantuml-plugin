@@ -14,6 +14,8 @@ Run the below command. Note that use `sbt.bat` when running on Windows.
 
 You can get the plugin at `target/scala-2.12/gitbucket-plantuml-plugin-assembly-1.0.0.jar` and copy the jar file to `~/.gitbucket/plugins` directory.
 
+**Note:** For most diagram types to be rendered correctly, GraphViz also must be present on the system. For details, see: http://plantuml.com/graphviz-dot
+
 License
 ----
 
