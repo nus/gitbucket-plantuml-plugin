@@ -3,7 +3,7 @@ package com.yotaichino.gitbucket.plugins.plantuml
 import gitbucket.core.controller._
 import gitbucket.core.service._
 import gitbucket.core.util._
-import gitbucket.core.util.ControlUtil._
+import gitbucket.core.util.SyntaxSugars._
 import gitbucket.core.util.Directory._
 import gitbucket.core.util.FileUtil
 import gitbucket.core.util.JGitUtil
