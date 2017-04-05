@@ -9,7 +9,9 @@ class Plugin extends gitbucket.core.plugin.Plugin {
   override val pluginId: String = "plantuml_plugin"
   override val pluginName: String = "PlantUML Plugin"
   override val description: String = "A plugin renders PlantUML."
-  override val versions: List[Version] = List(new Version("1.1.0"))
+  override val versions: List[Version] = List(
+    new Version("1.0.0"),
+    new Version("1.1.0"))
 
   override def initialize(registry: PluginRegistry, context: ServletContext, settings: SystemSettings): Unit = {
     val renderer = new PlantUMLRenderer()
