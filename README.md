@@ -1,20 +1,47 @@
 gitbucket-plantuml-plugin
 ========
-A GitBucket plugin renders [PlantUML](http://plantuml.com/) sources.
+A GitBucket plugin that renders [PlantUML](http://plantuml.com/) diagrams.
 
 ![screenshot01.png](screenshots/screenshot01.png "screenshot01.png")
 
+Usage
+-----
+After the plug-in it's installed, just create files with one of the following extensions: ```*.pu```, ```*.puml``` or ```*.plantuml``` that contain the PlantUML specific block:
+```
+@startuml
+<<you UML code goes here>>
+@enduml
+```
+
+Compatibility
+-------------
+Plugin version | GitBucket version
+:--------------|:-----------------
+1.1.x          | >= 4.11.y
+1.0.x          | >= 4.10.y
+
+Installation
+------------
+ - Download the latest plug-in JAR from [[Releases](https://github.com/nus/gitbucket-plantuml-plugin/releases)] and copy it to ```$GITBUCKET_HOME/plugins/```.
+ - Restart GitBucket
+
+Alternatively you can build the plug-in yourself from the sources like it's described below.
+
+**Note:** For most diagram types to be rendered correctly, GraphViz also must be present on the system. For details, see: http://plantuml.com/graphviz-dot .
+
 Building
 ----
-Run the below command. Note that use `sbt.bat` when running on Windows.
+
+**Prerequisites:** Scala and SBT installed and working on your system, e.g. with the help of [SDKMNAN!](http://sdkman.io/) .
+ 
+Run the command below in the root directory of the plug-in in order to build it:
 
 ```
-./sbt.sh assembly
+sbt assembly
 ```
 
-You can get the plugin at `target/scala-2.12/gitbucket-plantuml-plugin-assembly-1.0.0.jar` and copy the jar file to `~/.gitbucket/plugins` directory.
+The plugin is built at `target/scala-2.12/gitbucket-plantuml-plugin-assembly-x.y.z.jar` and it should be copied to ```$GITBUCKET_HOME/plugins/``` directory.
 
-**Note:** For most diagram types to be rendered correctly, GraphViz also must be present on the system. For details, see: http://plantuml.com/graphviz-dot
 
 License
 ----

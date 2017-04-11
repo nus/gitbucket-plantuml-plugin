@@ -1,3 +1,3 @@
-PlantUML Version: "8059"
+PlantUML Version: "2017.10"
 ------------------------
 Note: PlantUML doesn't seem to use http://semver.org/ yet !
