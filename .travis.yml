@@ -10,7 +10,7 @@ scala:
 addons:
   apt:
     packages:
-      - oracle-java8-installerj
+      - oracle-java8-installer
 
 jdk:
   - oraclejdk8
