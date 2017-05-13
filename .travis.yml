@@ -1,0 +1,17 @@
+sudo: false
+
+language: scala
+
+scala:
+  - 2.12.2
+  
+addons:
+  apt:
+    packages:
+      - oracle-java8-installerj
+
+jdk:
+  - oraclejdk8
+
+script:
+  - sbt test
