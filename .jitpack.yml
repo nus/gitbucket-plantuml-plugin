@@ -1,0 +1,6 @@
+jdk:
+  - oraclejdk8
+
+install:
+  - echo "Building fat JAR with sbt!"
+  - sbt assembly
