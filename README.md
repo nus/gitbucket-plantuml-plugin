@@ -1,4 +1,4 @@
-gitbucket-plantuml-plugin
+gitbucket-plantuml-plugin [![Build Status](https://travis-ci.org/nus/gitbucket-plantuml-plugin.svg?branch=master)](https://travis-ci.org/nus/gitbucket-plantuml-plugin)
 ========
 A GitBucket plugin that renders [PlantUML](http://plantuml.com/) diagrams.
 
