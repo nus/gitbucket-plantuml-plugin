@@ -15,7 +15,15 @@ class PlantUMLRenderer extends Renderer {
 
   def imgEmbedded(content: String): String = {
     val raw = PlantUMLUtils.generateSVGImage(content)
-    val src = Base64.getEncoder.encodeToString(raw)
-    s"""<img src="data:image/svg+xml;charset=utf-8;base64,$src">"""
+    raw match {
+      case null => {
+        val c = StringUtil.escapeHtml(content)
+        s"""<pre class="prettyprint linenums blob">$c</pre>"""
+      }
+      case _ => {
+        val src = Base64.getEncoder.encodeToString(raw)
+        s"""<img src="data:image/svg+xml;charset=utf-8;base64,$src">"""
+      }
+    }
   }
 }
