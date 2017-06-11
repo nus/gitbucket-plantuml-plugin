@@ -15,7 +15,8 @@ class Plugin extends gitbucket.core.plugin.Plugin {
     new Version("1.1.1"),
     new Version("1.1.2"),
     new Version("1.2.0"),
-    new Version("1.2.1")
+    new Version("1.2.1"),
+    new Version("1.3.0")
   )
 
   override def initialize(registry: PluginRegistry, context: ServletContext, settings: SystemSettings): Unit = {
