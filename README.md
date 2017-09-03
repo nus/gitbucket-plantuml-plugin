@@ -6,7 +6,7 @@ A GitBucket plugin that renders [PlantUML](http://plantuml.com/) diagrams.
 
 Usage
 -----
-After the plug-in it's installed, just create files with one of the following extensions: ```*.pu```, ```*.puml``` or ```*.plantuml``` that contain the PlantUML specific block:
+After the plug-in is installed, just create files with one of the following extensions: ```*.pu```, ```*.puml``` or ```*.plantuml``` that contain the PlantUML specific block:
 ```
 @startuml
 <<you UML code goes here>>
@@ -17,6 +17,7 @@ Compatibility
 -------------
 Plugin version | GitBucket version
 :--------------|:-----------------
+1.4.x          | >= 4.16.y
 1.3.x          | >= 4.13.y
 1.2.x          | >= 4.12.y
 1.1.x          | >= 4.11.y
@@ -35,7 +36,7 @@ Building
 ----
 
 **Prerequisites:** Scala and SBT installed and working on your system, e.g. with the help of [SDKMNAN!](http://sdkman.io/) .
- 
+
 Run the command below in the root directory of the plug-in in order to build it:
 
 ```

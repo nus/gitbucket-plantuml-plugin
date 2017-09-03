@@ -5,8 +5,8 @@ sudo: required
 language: scala
 
 scala:
-  - 2.12.2
-  
+  - 2.12.3
+
 addons:
   apt:
     packages:
@@ -17,8 +17,8 @@ jdk:
 
 script:
   - sbt test
-  
+
 cache:
   directories:
     - "$HOME/.ivy2"
-    - "$HOME/.sbt"  
+    - "$HOME/.sbt"

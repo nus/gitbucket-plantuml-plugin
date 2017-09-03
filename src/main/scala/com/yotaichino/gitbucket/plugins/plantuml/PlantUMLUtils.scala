@@ -16,7 +16,7 @@ object PlantUMLUtils {
     val os = new ByteArrayOutputStream()
 
     try {
-      reader.generateImage(os, new FileFormatOption(format))
+      reader.outputImage(os, new FileFormatOption(format)).getDescription()
     } catch {
       case _: IOException => return null
       case _: NullPointerException => return null
