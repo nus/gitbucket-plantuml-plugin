@@ -1,3 +1,0 @@
-PlantUML Version: "1.2017.14"
-------------------------
-Note: PlantUML doesn't seem to use a Maven Repo for this artifact yet !

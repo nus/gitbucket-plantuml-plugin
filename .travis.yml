@@ -16,7 +16,7 @@ jdk:
   - oraclejdk8
 
 script:
-  - sbt test
+  - sbt downloadPlantuml test
   
 cache:
   directories:

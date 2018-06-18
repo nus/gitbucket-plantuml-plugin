@@ -39,7 +39,7 @@ Building
 Run the command below in the root directory of the plug-in in order to build it:
 
 ```
-sbt assembly
+sbt downloadPlantuml assembly
 ```
 
 The plugin is built at `target/scala-2.12/gitbucket-plantuml-plugin-assembly-x.y.z.jar` and it should be copied to ```$GITBUCKET_HOME/plugins/``` directory.
