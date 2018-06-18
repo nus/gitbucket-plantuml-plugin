@@ -4,11 +4,10 @@ organization := "com.yotaichino"
 
 version := "1.3.0"
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.12.6"
+gitbucketVersion := "4.25.0"
 
 libraryDependencies ++= Seq(
-  "io.github.gitbucket"      %% "gitbucket"          % "4.13.0"   % "provided",
-  "javax.servlet"            % "javax.servlet-api"   % "3.1.0" % "provided",
   "org.scalatest"            %% "scalatest"          % "3.0.1" % "test"
 )
 
