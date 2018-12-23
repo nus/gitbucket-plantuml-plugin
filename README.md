@@ -17,6 +17,7 @@ Compatibility
 -------------
 Plugin version | GitBucket version
 :--------------|:-----------------
+1.5.x          | >= 4.29.y
 1.4.x          | >= 4.25.y
 1.3.x          | >= 4.13.y
 1.2.x          | >= 4.12.y
