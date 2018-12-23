@@ -5,7 +5,7 @@ organization := "com.yotaichino"
 version := "1.4.0"
 
 scalaVersion := "2.12.6"
-gitbucketVersion := "4.25.0"
+gitbucketVersion := "4.29.0"
 
 libraryDependencies ++= Seq(
   "org.scalatest"            %% "scalatest"          % "3.0.1" % "test"
