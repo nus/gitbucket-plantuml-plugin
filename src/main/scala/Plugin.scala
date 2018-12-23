@@ -27,6 +27,6 @@ class Plugin extends gitbucket.core.plugin.Plugin {
     registry.addRenderer("puml", renderer)
     registry.addRenderer("pu", renderer)
 
-    registry.addController(new PlantUMLController(), "/*")
+    registry.addController("/*", new PlantUMLController())
   }
 }
