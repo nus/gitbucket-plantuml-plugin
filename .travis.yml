@@ -5,7 +5,7 @@ sudo: required
 language: scala
 
 scala:
-  - 2.12.2
+  - 2.13.0
   
 addons:
   apt:

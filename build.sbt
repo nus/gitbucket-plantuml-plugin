@@ -4,11 +4,11 @@ organization := "com.yotaichino"
 
 version := "1.5.0"
 
-scalaVersion := "2.12.6"
-gitbucketVersion := "4.29.0"
+scalaVersion := "2.13.0"
+gitbucketVersion := "4.32.0"
 
 libraryDependencies ++= Seq(
-  "org.scalatest"            %% "scalatest"          % "3.0.1" % "test"
+  "org.scalatest"            %% "scalatest"          % "3.0.8" % "test"
 )
 
 scalacOptions := Seq("-deprecation", "-feature", "-language:postfixOps", "-Ydelambdafy:method", "-target:jvm-1.8")
