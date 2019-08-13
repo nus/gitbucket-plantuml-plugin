@@ -3,4 +3,4 @@ jdk:
 
 install:
   - echo "Building fat JAR with sbt!"
-  - sbt assembly
+  - sbt downloadPlantuml test assembly
