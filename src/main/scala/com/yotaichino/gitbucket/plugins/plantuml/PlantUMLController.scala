@@ -1,5 +1,7 @@
 package com.yotaichino.gitbucket.plugins.plantuml
 
+import scala.util.Using
+
 import gitbucket.core.controller._
 import gitbucket.core.service._
 import gitbucket.core.util._
@@ -17,7 +19,7 @@ trait PlantUMLControllerBase extends ControllerBase {
 
   get("/:owner/:repository/plantuml/*")(referrersOnly { repository =>
     val (id, path) = repository.splitPath(multiParams("splat").head)
-    using(Git.open(getRepositoryDir(repository.owner, repository.name))){ git =>
+    Using.resource(Git.open(getRepositoryDir(repository.owner, repository.name))){ git =>
       val revCommit = JGitUtil.getRevCommitFromId(git, git.getRepository.resolve(id))
 
       JGitUtil.getContentFromPath(git, revCommit.getTree, path, true).map { content =>
