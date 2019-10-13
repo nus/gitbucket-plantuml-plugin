@@ -2,7 +2,7 @@ name := "gitbucket-plantuml-plugin"
 
 organization := "com.yotaichino"
 
-version := "1.6.0"
+version := "1.6.1"
 
 scalaVersion := "2.13.0"
 gitbucketVersion := "4.32.0"
