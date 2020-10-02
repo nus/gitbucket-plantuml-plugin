@@ -2,7 +2,7 @@ name := "gitbucket-plantuml-plugin"
 
 organization := "com.yotaichino"
 
-version := "1.6.1"
+version := "1.6.2"
 
 scalaVersion := "2.13.0"
 gitbucketVersion := "4.32.0"
@@ -18,7 +18,7 @@ useJCenter := true
 
 lazy val downloadPlantuml = taskKey[Unit]("Download the PlantUML ASL Version.")
 downloadPlantuml := {
-  val url = "https://svwh.dl.sourceforge.net/project/plantuml/1.2019.11/plantuml-jar-asl-1.2019.11.zip"
+  val url = "https://svwh.dl.sourceforge.net/project/plantuml/1.2020.18/plantuml-jar-asl-1.2020.18.zip"
   if (java.nio.file.Files.notExists(new File("lib/plantuml.jar").toPath())) {
     println(url)
     IO.unzipURL(new URL(url), new File("lib"))
