@@ -2,10 +2,10 @@ name := "gitbucket-plantuml-plugin"
 
 organization := "com.yotaichino"
 
-version := "1.6.2"
+version := "1.7.0"
 
-scalaVersion := "2.13.0"
-gitbucketVersion := "4.32.0"
+scalaVersion := "2.13.7"
+gitbucketVersion := "4.37.0"
 
 libraryDependencies ++= Seq(
   "org.scalatest"            %% "scalatest"          % "3.0.8" % "test"
