@@ -18,7 +18,7 @@ useJCenter := true
 
 lazy val downloadPlantuml = taskKey[Unit]("Download the PlantUML ASL Version.")
 downloadPlantuml := {
-  val url = "https://downloads.sourceforge.net/project/plantuml/1.2021.9/plantuml-jar-asl-1.2021.9.zip"
+  val url = "https://downloads.sourceforge.net/project/plantuml/1.2022.5/plantuml-jar-asl-1.2022.5.zip"
   if (java.nio.file.Files.notExists(new File("lib/plantuml.jar").toPath())) {
     println(url)
     IO.unzipURL(new URL(url), new File("lib"))
