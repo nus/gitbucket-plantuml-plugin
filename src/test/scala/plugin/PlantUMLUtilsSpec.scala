@@ -5,7 +5,8 @@ class PlantUMLUtilsSpec extends FunSpec {
   describe("generateSVGImage") {
     it("should return a SVG image.") {
       val content = new String(PlantUMLUtils.generateSVGImage("@startuml\n@enduml"), "utf-8")
-      assert(content.startsWith("""<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg"""))
+      println(content)
+      assert(content.startsWith("""<svg xmlns="http://www.w3.org/2000/svg" """))
     }
     it("should return null when empty string") {
       assert(PlantUMLUtils.generateSVGImage("") == null)

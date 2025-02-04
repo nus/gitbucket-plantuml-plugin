@@ -2,25 +2,18 @@ name := "gitbucket-plantuml-plugin"
 
 organization := "com.yotaichino"
 
-version := "1.7.0"
+version := "1.8.0"
 
 scalaVersion := "2.13.7"
-gitbucketVersion := "4.37.0"
+gitbucketVersion := "4.36.0"
 
 libraryDependencies ++= Seq(
   "org.scalatest"            %% "scalatest"          % "3.0.8" % "test"
 )
 
+libraryDependencies += "net.sourceforge.plantuml" % "plantuml-asl" % "1.2025.0"
+
 scalacOptions := Seq("-deprecation", "-feature", "-language:postfixOps", "-Ydelambdafy:method", "-target:jvm-1.8")
-javacOptions in compile ++= Seq("-target", "8", "-source", "8")
+Compile / javacOptions ++= Seq("-target", "8", "-source", "17")
 
-useJCenter := true 
-
-lazy val downloadPlantuml = taskKey[Unit]("Download the PlantUML ASL Version.")
-downloadPlantuml := {
-  val url = "https://downloads.sourceforge.net/project/plantuml/1.2022.5/plantuml-jar-asl-1.2022.5.zip"
-  if (java.nio.file.Files.notExists(new File("lib/plantuml.jar").toPath())) {
-    println(url)
-    IO.unzipURL(new URL(url), new File("lib"))
-  }
-}
+useJCenter := true
