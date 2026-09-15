@@ -28,9 +28,9 @@ trait PlantUMLControllerBase extends ControllerBase {
               contentType = "image/svg+xml"
               PlantUMLUtils.generateSVGImage(new String(content))
             }
-          case _ => unsupportedMediaType
+          case _ => unsupportedMediaType()
         }
-      } getOrElse NotFound
+      } getOrElse NotFound()
     }
   })
 
