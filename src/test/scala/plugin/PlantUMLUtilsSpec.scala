@@ -5,7 +5,7 @@ class PlantUMLUtilsSpec extends FunSpec {
   describe("generateSVGImage") {
     it("should return a SVG image.") {
       val content = new String(PlantUMLUtils.generateSVGImage("@startuml\n@enduml"), "utf-8")
-      assert(content.startsWith("""<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg"""))
+      assert(content.startsWith("<svg"))
     }
     it("should return null when empty string") {
       assert(PlantUMLUtils.generateSVGImage("") == null)
@@ -15,6 +15,11 @@ class PlantUMLUtilsSpec extends FunSpec {
       assert(PlantUMLUtils.generateSVGImage("\n\n") == null)
       assert(PlantUMLUtils.generateSVGImage(" \r\n  ") == null)
       assert(PlantUMLUtils.generateSVGImage(" \r  ") == null)
+    }
+    it("should render the testdot diagnostic diagram") {
+      val content = new String(PlantUMLUtils.generateSVGImage("@startuml\ntestdot\n@enduml"), "utf-8")
+      assert(content.startsWith("<svg"))
+      assert(content.contains("PlantUML version"))
     }
   }
 }

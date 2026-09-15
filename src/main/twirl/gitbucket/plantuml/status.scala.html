@@ -1,0 +1,21 @@
+@(plantumlVersion: String, diagnostics: Html)(implicit context: gitbucket.core.controller.Context)
+@gitbucket.core.html.main("PlantUML") {
+  @gitbucket.core.admin.html.menu("plantuml") {
+    <h1 class="system-settings-title">PlantUML</h1>
+    <p>PlantUML library version: <strong>@plantumlVersion</strong></p>
+    <p>
+      Sequence diagrams render without any extra tooling, but most other diagram types
+      (activity, class, component, state, ...) are laid out by
+      <a href="https://plantuml.com/graphviz-dot" target="_blank" rel="noopener">Graphviz's <code>dot</code></a>,
+      which must be installed and on the <code>PATH</code> of the process running GitBucket
+      (or pointed to via the <code>GRAPHVIZ_DOT</code> environment variable).
+    </p>
+    <p>Status, as reported by PlantUML itself:</p>
+    <div class="well">
+      @diagnostics
+    </div>
+    <p class="text-muted">
+      If this shows an error, install Graphviz on the GitBucket host and restart GitBucket.
+    </p>
+  }
+}

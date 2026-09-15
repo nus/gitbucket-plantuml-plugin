@@ -1,4 +1,4 @@
-gitbucket-plantuml-plugin [![Build Status](https://travis-ci.org/nus/gitbucket-plantuml-plugin.svg?branch=master)](https://travis-ci.org/nus/gitbucket-plantuml-plugin)
+gitbucket-plantuml-plugin [![build](https://github.com/nus/gitbucket-plantuml-plugin/workflows/build/badge.svg?branch=master)](../../actions?query=workflow%3Abuild+branch%3Amaster)
 ========
 A GitBucket plugin that renders [PlantUML](http://plantuml.com/) diagrams.
 
@@ -17,6 +17,7 @@ Compatibility
 -------------
 Plugin version | GitBucket version
 :--------------|:-----------------
+1.8.x          | >= 4.47.y
 1.7.x          | >= 4.37.y
 1.6.x          | >= 4.32.y
 1.5.x          | >= 4.29.y
@@ -28,12 +29,13 @@ Plugin version | GitBucket version
 
 Installation
 ------------
- - Download the latest plug-in JAR from [[Releases](https://github.com/nus/gitbucket-plantuml-plugin/releases)] and copy it to ```$GITBUCKET_HOME/plugins/```.
+ - Download the latest plug-in JAR from [[Releases](../../releases)] and copy it to ```$GITBUCKET_HOME/plugins/```.
  - Restart GitBucket
 
 Alternatively you can build the plug-in yourself from the sources like it's described below.
 
 **Note:** For most diagram types to be rendered correctly, GraphViz also must be present on the system. For details, see: http://plantuml.com/graphviz-dot .
+Once the plug-in is installed, an administrator can check whether GraphViz is correctly detected on the **System Admin > PlantUML** page.
 
 Building
 ----
@@ -43,7 +45,7 @@ Building
 Run the command below in the root directory of the plug-in in order to build it:
 
 ```
-sbt downloadPlantuml assembly
+sbt assembly
 ```
 
 The plugin is built at `target/scala-2.13/gitbucket-plantuml-plugin-assembly-x.y.z.jar` and it should be copied to ```$GITBUCKET_HOME/plugins/``` directory.
@@ -69,5 +71,5 @@ License
 Relating sofware license
 ----
 
-This plugin contains PlantUML library which exists at `lib` directory.
-The library licensed under the Apache License, Version 2.0.
+This plugin bundles the [PlantUML](https://github.com/plantuml/plantuml) library (`plantuml-asl` artifact from Maven Central).
+The library is licensed under the Apache License, Version 2.0.

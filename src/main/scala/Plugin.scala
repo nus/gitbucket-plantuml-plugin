@@ -1,7 +1,8 @@
 import com.yotaichino.gitbucket.plugins.plantuml.PlantUMLRenderer
 import com.yotaichino.gitbucket.plugins.plantuml.PlantUMLController
+import com.yotaichino.gitbucket.plugins.plantuml.PlantUMLAdminController
 import javax.servlet.ServletContext
-import gitbucket.core.plugin.PluginRegistry
+import gitbucket.core.plugin.{Link, PluginRegistry}
 import gitbucket.core.service.SystemSettingsService.SystemSettings
 import io.github.gitbucket.solidbase.model.Version
 
@@ -22,7 +23,8 @@ class Plugin extends gitbucket.core.plugin.Plugin {
     new Version("1.6.0"),
     new Version("1.6.1"),
     new Version("1.6.2"),
-    new Version("1.7.0")
+    new Version("1.7.0"),
+    new Version("1.8.0")
   )
 
   override def initialize(registry: PluginRegistry, context: ServletContext, settings: SystemSettings): Unit = {
@@ -33,5 +35,7 @@ class Plugin extends gitbucket.core.plugin.Plugin {
     registry.addRenderer("pu", renderer)
 
     registry.addController("/*", new PlantUMLController())
+    registry.addController("/admin/plantuml/*", new PlantUMLAdminController())
+    registry.addSystemSettingMenu(_ => Some(Link("plantuml", "PlantUML", "admin/plantuml", Some("pulse"))))
   }
 }
