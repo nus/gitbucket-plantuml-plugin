@@ -1,19 +1,12 @@
-dist: trusty
-
-sudo: required
+dist: focal
 
 language: scala
 
 scala:
-  - 2.13.0
+  - 2.13.18
   
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
-
 jdk:
-  - oraclejdk8
+  - openjdk17
 
 script:
   - sbt downloadPlantuml test

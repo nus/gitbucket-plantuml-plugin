@@ -38,7 +38,7 @@ Alternatively you can build the plug-in yourself from the sources like it's desc
 Building
 ----
 
-**Prerequisites:** Scala and SBT installed and working on your system, e.g. with the help of [SDKMNAN!](http://sdkman.io/) .
+**Prerequisites:** JDK 17 or newer, Scala, and SBT installed and working on your system, e.g. with the help of [SDKMNAN!](http://sdkman.io/) . GitBucket must also run on Java 17 or newer.
  
 Run the command below in the root directory of the plug-in in order to build it:
 

@@ -5,7 +5,18 @@ class PlantUMLUtilsSpec extends FunSpec {
   describe("generateSVGImage") {
     it("should return a SVG image.") {
       val content = new String(PlantUMLUtils.generateSVGImage("@startuml\n@enduml"), "utf-8")
-      assert(content.startsWith("""<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg"""))
+      assert(content.contains("""<svg xmlns="http://www.w3.org/2000/svg""""))
+    }
+    it("should render chart diagrams introduced after PlantUML 1.2022.5") {
+      val source =
+        """@startchart
+          |h-axis [Q1, Q2, Q3, Q4]
+          |v-axis "Revenue" 0 --> 100
+          |bar "Sales" [45, 62, 58, 70] #3498db
+          |legend right
+          |@endchart""".stripMargin
+      val content = new String(PlantUMLUtils.generateSVGImage(source), "utf-8")
+      assert(content.contains("<svg"))
     }
     it("should return null when empty string") {
       assert(PlantUMLUtils.generateSVGImage("") == null)
