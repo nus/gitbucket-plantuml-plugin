@@ -34,8 +34,6 @@ Installation
 
 Alternatively you can build the plug-in yourself from the sources like it's described below.
 
-**Note:** For most diagram types to be rendered correctly, GraphViz also must be present on the system. For details, see: http://plantuml.com/graphviz-dot .
-
 Building
 ----
 
