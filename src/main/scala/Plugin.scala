@@ -25,7 +25,8 @@ class Plugin extends gitbucket.core.plugin.Plugin {
     new Version("1.6.0"),
     new Version("1.6.1"),
     new Version("1.6.2"),
-    new Version("1.7.0")
+    new Version("1.7.0"),
+    new Version("1.8.0")
   )
 
   override val assetsMappings: Seq[(String, String)] = Seq("/plantuml_plugin/" -> "/assets/")
@@ -41,6 +42,8 @@ class Plugin extends gitbucket.core.plugin.Plugin {
   }
 
   override def initialize(registry: PluginRegistry, context: ServletContext, settings: SystemSettings): Unit = {
+    super.initialize(registry, context, settings)
+    
     val renderer = new PlantUMLRenderer()
 
     registry.addRenderer("plantuml", renderer)
