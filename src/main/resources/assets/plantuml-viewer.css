@@ -1,0 +1,72 @@
+.plantuml-viewer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.plantuml-viewer .plantuml-viewer-toolbar:not([hidden]) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding-bottom: 4px;
+}
+
+.plantuml-viewer .plantuml-viewer-fullscreen {
+  margin-left: auto;
+}
+
+.plantuml-viewer .plantuml-viewer-viewport {
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.plantuml-viewer .plantuml-viewer-viewport img {
+  display: block;
+  width: auto;
+  max-width: none;
+  max-height: 600px;
+  padding: 0;
+}
+
+.plantuml-viewer.is-ready .plantuml-viewer-viewport {
+  height: var(--plantuml-viewer-height);
+  cursor: grab;
+  touch-action: none;
+}
+
+.plantuml-viewer.is-ready .plantuml-viewer-viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.plantuml-viewer.is-ready .plantuml-viewer-viewport img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: none;
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+.plantuml-viewer .plantuml-viewer-status:not([hidden]) {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 4px 8px;
+  background: white;
+  color: black;
+  pointer-events: none;
+}
+
+.plantuml-viewer:fullscreen {
+  padding: 8px;
+  background: white;
+}
+
+.plantuml-viewer:fullscreen .plantuml-viewer-viewport {
+  flex: 1 1 auto;
+  min-height: 0;
+}
