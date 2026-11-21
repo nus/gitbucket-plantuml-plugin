@@ -17,6 +17,7 @@ Compatibility
 -------------
 Plugin version | GitBucket version
 :--------------|:-----------------
+1.8.x          | >= 4.48.y
 1.7.x          | >= 4.37.y
 1.6.x          | >= 4.32.y
 1.5.x          | >= 4.29.y
@@ -33,12 +34,10 @@ Installation
 
 Alternatively you can build the plug-in yourself from the sources like it's described below.
 
-**Note:** For most diagram types to be rendered correctly, GraphViz also must be present on the system. For details, see: http://plantuml.com/graphviz-dot .
-
 Building
 ----
 
-**Prerequisites:** Scala and SBT installed and working on your system, e.g. with the help of [SDKMNAN!](http://sdkman.io/) .
+**Prerequisites:** JDK 17 or newer, Scala, and SBT installed and working on your system, e.g. with the help of [SDKMNAN!](http://sdkman.io/) . GitBucket must also run on Java 17 or newer.
  
 Run the command below in the root directory of the plug-in in order to build it:
 
